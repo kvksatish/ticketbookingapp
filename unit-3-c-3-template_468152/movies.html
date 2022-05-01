@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies</title>
+  <style>
+    body {
+      background-color: aqua;
+    }
+
+    #movies {
+      display: grid;
+      margin-top: 1%;
+      grid-template-columns: repeat(4, 20%);
+      gap: 4%;
+      margin-left: 5%;
+
+
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: 300px;
+    }
+
+    #cont {
+
+      height: 500px;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: rgb(253, 251, 252);
+      box-shadow: rgb(255, 255, 255) 0px 5px 15px;
+      color: rgb(0, 0, 0);
+      border-radius: 10px;
+    }
+
+    .book_now {
+      color: red;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #search_bar {
+      text-align: center;
+    }
+
+    #search {
+      height: 30px;
+      width: 500px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+    <h1>Movie List</h1>
+    <h1 id="wallet"></h1>
+    <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
+  </div>
+  <div id="search_bar">
+    <input type="text" oninput="debounce(main,1000)" id="search" placeholder="Enter the movie name">
+
+    <!-- input box for searching movies with id as "search" -->
+    <!-- No button should be there for searching movies, it should search with input  -->
+  </div>
+
+  <div id="movies">
+    <!-- Append all searched movies here in grid format -->
+    <!-- Every movie card should have image, title and a book now button  -->
+    <!-- Book now buttons should have class "book_now"  -->
+  </div>
+</body>
+
+</html>
+<script src="scripts\movies.js"></script>
